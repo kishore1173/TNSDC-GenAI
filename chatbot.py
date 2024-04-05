@@ -12,7 +12,7 @@ from keras.layers import Embedding, LSTM, Dense
 from keras.layers import Dense, Dropout
 from keras.models import Sequential
 
-data_file=open("D:\VS CODE\Flask\chat1\dataset1.json").read()
+data_file=open("dataset1.json").read()
 data=json.loads(data_file)
 
 # Initialize lemmatizer
@@ -72,7 +72,7 @@ model.add(Dense(len(y_train[0]), activation='softmax'))
 # accuracy = 100%
 """
 
-LSTM Model
+#LSTM Model
 model = Sequential()
 model.add(Embedding(input_dim=len(X_train[0]), output_dim=128))
 model.add(LSTM(110, return_sequences = True, input_shape=(X_train.shape[1], 1)))
